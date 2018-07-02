@@ -304,7 +304,7 @@ int Model::columnCount( const QModelIndex & /*parent*/ ) const {
 
 bool Model::insertRows( int row, int count, const QModelIndex & parent, QPoint pos ) {
   if (count > 1) {
-    qDebug() << __PRETTY_FUNCTION__ << "FATAL: this might need some testing, exiting";
+    qDebug() << __FUNCTION__ << "FATAL: this might need some testing, exiting";
     exit(1);
   }
 
@@ -318,7 +318,7 @@ bool Model::insertRows( int row, int count, const QModelIndex & parent, QPoint p
       if (n != NULL) {
 	rootItem->appendChild( n );
       } else {
-	qDebug() << __PRETTY_FUNCTION__ << "FATAL ERROR: in insertRows(), exiting";
+	qDebug() << __FUNCTION__ << "FATAL ERROR: in insertRows(), exiting";
 	exit(1);
       }
     }
@@ -340,7 +340,7 @@ bool Model::insertRows( int row, int count, const QModelIndex & parent, QPoint p
     endInsertRows();
     return true;
   }
-  qDebug() << __PRETTY_FUNCTION__ << "FATAL ERROR: can't add object to the automate class since i don't know what to do, exiting";
+  qDebug() << __FUNCTION__ << "FATAL ERROR: can't add object to the automate class since i don't know what to do, exiting";
   exit(1);
   return false;
 }
@@ -721,7 +721,7 @@ bool Model::insertNode(QPoint pos) {
 }
 
 void Model::clear() {
-//   qDebug() << __PRETTY_FUNCTION__ << " -> there are " << rowCount(QModelIndex()) << " items to be removed first";
+//   qDebug() <<__FUNCTION__ << " -> there are " << rowCount(QModelIndex()) << " items to be removed first";
   while(rowCount(QModelIndex())) {
     removeNode(index(0,0,QModelIndex()));
   }

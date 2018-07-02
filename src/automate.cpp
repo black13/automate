@@ -71,7 +71,7 @@ Model* automate::model() {
 void automate::openNewView(ViewType vt) {
   AbstractView* view;
   QString a;
-//   qDebug() << "in file: " << __FILE__ << "on line: " << __LINE__;
+  qDebug() << "in file: " << __FILE__ << "on line: " << __LINE__;
   switch (vt) {
     case TreeViewType:
       view = new TreeView(model());
@@ -105,7 +105,10 @@ unsigned int automate::connectionCount(){
 }
 
 void automate::reset() {
-  m_model->reset();
+  //m_model->reset();
+	m_model->beginResetModel();
+	m_model->clear();
+	m_model->endResetModel();
 }
 
 void automate::layoutChanged() {

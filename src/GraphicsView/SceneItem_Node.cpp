@@ -21,7 +21,8 @@ SceneItem_Node::SceneItem_Node ( QPersistentModelIndex index ) {
     setFlag ( QGraphicsItem::ItemIsMovable );
     setFlag ( QGraphicsItem::ItemIsSelectable );
 //   setFlag( QGraphicsItem::ItemIsFocusable );
-    setAcceptsHoverEvents ( true );
+    //setAcceptsHoverEvents ( true );
+	setAcceptHoverEvents(true);
     penWidth = 3;
 
     setZValue ( 10 );

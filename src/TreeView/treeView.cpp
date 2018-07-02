@@ -59,7 +59,7 @@ TreeView::TreeView( Model* model, QMainWindow* parent ) : AbstractView( parent )
 }
 
 TreeView::~TreeView() {
-//   qDebug() << __PRETTY_FUNCTION__;
+//   qDebug() <<__FUNCTION__;
   delete ism;
   delete proxyModel;
 }

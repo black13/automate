@@ -31,7 +31,7 @@
 #include <QObject>
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsItem>
-
+#include <QMenu>
 #include "GraphicsItemModelExtension.h"
 #include "SceneItem_Connection.h"
 #include "SceneItem_LabelEditor.h"

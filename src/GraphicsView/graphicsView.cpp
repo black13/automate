@@ -62,7 +62,7 @@ GraphicsView::GraphicsView ( Model *model, QMainWindow* parent ) : AbstractView 
 }
 
 GraphicsView::~GraphicsView() {
-//   qDebug() << __PRETTY_FUNCTION__;
+//   qDebug() <<__FUNCTION__;
 //     delete selectionModel;
     delete tb;
     delete itemView;

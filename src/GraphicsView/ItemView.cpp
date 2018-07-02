@@ -98,13 +98,13 @@ QRegion ItemView::visualRegionForSelection ( const QItemSelection &/*selection*/
 }
 
 void ItemView::reset() {
-    qDebug() << __PRETTY_FUNCTION__;
+    qDebug() << __FUNCTION__;
     emit clearScene();
     init();
 }
 
 void ItemView::init() {
-//   qDebug() << __PRETTY_FUNCTION__;
+//   qDebug() << __FUNCTION__;
     for ( int i = 0; i < model->rowCount ( QModelIndex() ); ++i ) {
 //     qDebug() << "adding node i =" << i;
         QModelIndex item = model->index ( i, 0, QModelIndex() );
@@ -189,7 +189,7 @@ void ItemView::dataChanged ( const QModelIndex & topLeft, const QModelIndex & bo
             scene->updateConnection ( QPersistentModelIndex ( tmpIndex ) );
             break;
         default:
-            qDebug() << __PRETTY_FUNCTION__ << " didn't understand what i should be doing";
+            qDebug() << __FUNCTION__ << " didn't understand what i should be doing";
             exit ( 0 );
         }
         if ( tmpIndex == bottomRight )
@@ -200,6 +200,6 @@ void ItemView::dataChanged ( const QModelIndex & topLeft, const QModelIndex & bo
 
 void ItemView::layoutChanged() {
     //FIXME do we need that?
-    qDebug() << __PRETTY_FUNCTION__ << " is NOT implemented yet, please implement me!, exiting";
+    qDebug() << __FUNCTION__ << " is NOT implemented yet, please implement me!, exiting";
     exit ( 0 );
 }

@@ -36,8 +36,8 @@ SceneItem_Connection::SceneItem_Connection ( QPersistentModelIndex index ) {
 
     m_highlight = false;
     setFlag ( QGraphicsItem::ItemIsSelectable, true );
-    setAcceptsHoverEvents ( true );
-
+    //setAcceptsHoverEvents ( true );
+	setAcceptHoverEvents(true);
     myColor = Qt::black;
     pen = QPen ( myColor, 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin );
     line = QLine();

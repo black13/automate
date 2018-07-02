@@ -400,7 +400,7 @@ void GraphicsScene::mousePressEvent ( QGraphicsSceneMouseEvent *mouseEvent ) {
         if ( mouseEvent->button() == Qt::MidButton ) {
 	  views().first()->setDragMode(QGraphicsView::RubberBandDrag);//QGraphicsView::RubberBandDrag;QGraphicsView::ScrollHandDrag;QGraphicsView::NoDrag
         } else {
-//       qDebug() << __PRETTY_FUNCTION__;
+//       qDebug() <<__FUNCTION__;
             QGraphicsScene::mousePressEvent ( mouseEvent );
         }
 }

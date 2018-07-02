@@ -30,7 +30,7 @@ AbstractTreeItem::AbstractTreeItem( AbstractTreeItem *parent ) {
 }
 
 AbstractTreeItem::~AbstractTreeItem() {
-//   qDebug() << __PRETTY_FUNCTION__;
+//   qDebug() <<__FUNCTION__;
 }
 
 void AbstractTreeItem::appendChild( AbstractTreeItem *item ) {
